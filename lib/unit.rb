@@ -8,7 +8,12 @@ class Unit
  end
 
   def attack!(unit)
-    unit.damage(@attack_points)
+    if unit.class == Footman
+      unit.damage(@attack_points)
+    elsif unit.class == Siege
+      unit.damage(@attack_points * 2)
+    end
+      
   end
 
   def damage(points)

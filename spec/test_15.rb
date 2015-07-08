@@ -29,4 +29,12 @@ describe Siege do
     expect(@siege.attack_power).to eq(50)
   end
 
+  describe "#attack!" do
+    it "should deal 2x the damage on a barracks" do
+      barracks = Barracks.new()
+      barracks.should_receive(:damage).with(100)
+      @siege.attack!(barracks)
+    end
+  end
+
 end

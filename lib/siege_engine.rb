@@ -9,4 +9,5 @@ class Siege < Unit
     @health_points = 400
   end
 
+
 end
